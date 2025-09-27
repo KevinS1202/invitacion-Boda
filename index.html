@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitación - Nuestra Boda</title>
+  <style>
+    /* --- Diseño y animaciones --- */
+    :root{--accent:#e76f51;--accent2:#f4a261;--bg:#0f1724}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#071024 0%, #0f1724 50%, #071a2a 100%);display:flex;align-items:center;justify-content:center;padding:2rem;color:#fff}
+
+    .card{width:960px;max-width:95%;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border-radius:18px;padding:32px;box-shadow:0 20px 50px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+
+    /* confetti sutil */
+    .confetti{position:absolute;inset:0;pointer-events:none}
+    .confetti span{position:absolute;width:10px;height:18px;border-radius:3px;opacity:.95;transform-origin:center;animation:fall 4s linear infinite}
+    @keyframes fall{0%{transform:translateY(-30vh) rotate(0) }100%{transform:translateY(120vh) rotate(540deg)}}
+
+    .hero{display:flex;gap:24px;align-items:center}
+    .left{flex:1}
+    .couple{width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:#fff;box-shadow:0 8px 30px rgba(231,111,81,0.15);animation:pop 1s ease}
+    @keyframes pop{0%{transform:scale(.8);opacity:0}100%{transform:scale(1);opacity:1}}
+
+    h1{margin:0;font-size:28px}
+    p.lead{opacity:.9}
+
+    .actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:12px;cursor:pointer;backdrop-filter: blur(4px)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border:0}
+
+    .rsvp{margin-top:18px;display:flex;gap:10px;align-items:center}
+    .rsvp input{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+
+    .uploader{margin-top:18px}
+    .status{margin-top:10px;font-size:13px;opacity:.85}
+
+    footer{margin-top:18px;font-size:13px;opacity:.8}
+
+    /* responsive */
+    @media (max-width:720px){.hero{flex-direction:column;align-items:center}.left{text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="confetti" id="confetti"></div>
+
+    <div class="hero">
+      <div class="left">
+        <div class="couple">A &amp; M</div>
+        <h1>Nos casamos — Estás invitado</h1>
+        <p class="lead">Acompáñanos el sábado 15 de noviembre de 2025. Después de la fiesta queremos tus fotos — súbelas aquí para que queden en nuestro álbum.</p>
+
+        <div class="actions">
+          <button class="btn primary" id="btnOpenInvite">Ver Invitación Animada</button>
+          <button class="btn" id="btnRSVP">RSVP</button>
+          <button class="btn" id="btnUpload">Subir Fotos</button>
+        </div>
+
+        <div class="uploader" id="uploader" style="display:none">
+          <div>
+            <label>Selecciona las fotos (máx 20 a la vez)</label><br>
+            <input type="file" id="fileInput" multiple accept="image/*" />
+          </div>
+          <div class="rsvp" id="rsvpForm" style="display:none">
+            <input id="guestName" placeholder="Tu nombre" />
+            <button class="btn" id="confirmRSVP">Confirmar</button>
+          </div>
+          <div class="status" id="status"></div>
+        </div>
+
+        <footer>¿No quieres subir con Google? También puedes enviar las fotos por WhatsApp o crear un formulario.</footer>
+      </div>
+
+      <div class="right">
+        <!-- espacio para animación grande -->
+        <div id="cardAnim" style="width:320px;height:220px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+          <svg width="180" height="120" viewBox="0 0 180 120" preserveAspectRatio="xMidYMid">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffd6a5"/><stop offset="1" stop-color="#ffb4a2"/></linearGradient>
+            </defs>
+            <rect x="0" y="0" width="180" height="120" rx="12" fill="url(#g1)"></rect>
+            <text x="90" y="68" text-anchor="middle" style="font-weight:700;font-size:22px;fill:#6b2b2b">¡Nos casamos!</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google API: reemplaza los valores más abajo -->
+  <script>
+    // --- CONFIGURACIÓN (RELLENA ESTOS VALORES) ---
+    // Crea un proyecto en Google Cloud, habilita Drive API y crea credenciales OAuth 2.0 (tipo "Web application").
+    // Pon aquí el CLIENT_ID y API_KEY que te entrega Google. También crea una carpeta en tu Google Drive y copia su ID
+    const CLIENT_ID = 'TU_CLIENT_ID.apps.googleusercontent.com';
+    const API_KEY = 'TU_API_KEY';
+    const FOLDER_ID = 'TU_FOLDER_ID'; // carpeta en la que quieres guardar las fotos
+
+    const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'];
+    const SCOPES = 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.metadata';
+
+    // --- Animación confetti simple ---
+    function makeConfetti(){
+      const container = document.getElementById('confetti');
+      for(let i=0;i<24;i++){
+        const s = document.createElement('span');
+        s.style.left = Math.random()*100 + '%';
+        s.style.top = Math.random()*-40 + 'vh';
+        s.style.background = `hsl(${Math.random()*360}deg 70% 60%)`;
+        s.style.transform = `rotate(${Math.random()*360}deg)`;
+        s.style.animationDelay = (Math.random()*3)+'s';
+        s.style.opacity = 0.95;
+        container.appendChild(s);
+      }
+    }
+    makeConfetti();
+
+    // --- UI handlers ---
+    document.getElementById('btnOpenInvite').addEventListener('click', ()=>{
+      // simple animación: abrir modal o transformar la tarjeta
+      const anim = document.getElementById('cardAnim');
+      anim.animate([{transform:'translateY(0) scale(1)'},{transform:'translateY(-12px) scale(1.03)'},{transform:'translateY(0) scale(1)'}],{duration:1400,iterations:1});
+    });
+
+    document.getElementById('btnRSVP').addEventListener('click', ()=>{
+      const r = document.getElementById('rsvpForm'); r.style.display = r.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    document.getElementById('btnUpload').addEventListener('click', ()=>{
+      const up = document.getElementById('uploader'); up.style.display = up.style.display === 'none' ? 'block' : 'block';
+    });
+
+    // --- Google API: carga cliente JS ---
+    function loadGapi(){
+      const s = document.createElement('script');
+      s.src = 'https://apis.google.com/js/api.js';
+      s.onload = ()=>gapi.load('client:auth2', initClient);
+      document.body.appendChild(s);
+    }
+
+    async function initClient(){
+      try{
+        await gapi.client.init({ apiKey: API_KEY, clientId: CLIENT_ID, discoveryDocs: DISCOVERY_DOCS, scope: SCOPES });
+        console.log('gapi inicializado');
+      }catch(err){
+        console.error(err);
+        document.getElementById('status').innerText = 'Error inicializando Google API. Revisa CLIENT_ID y API_KEY en el código.';
+      }
+    }
+
+    loadGapi();
+
+    // --- Subida de archivos a Drive (multipart) ---
+    document.getElementById('fileInput').addEventListener('change', async (e)=>{
+      const files = [...e.target.files].slice(0,20);
+      if(files.length===0) return;
+      document.getElementById('status').innerText = 'Preparando subida...';
+
+      // asegurar sesión activa
+      if(!gapi.auth2.getAuthInstance().isSignedIn.get()){
+        try{await gapi.auth2.getAuthInstance().signIn();}catch(err){document.getElementById('status').innerText='Necesitas iniciar sesión con tu cuenta Google para subir.';return}
+      }
+
+      const token = gapi.auth.getToken().access_token;
+      let uploaded = 0;
+      for(const file of files){
+        document.getElementById('status').innerText = `Subiendo ${file.name} (${uploaded}/${files.length})...`;
+        try{
+          await uploadFileToDrive(file, token);
+          uploaded++;
+        }catch(err){
+          console.error('Error subiendo',err);
+          document.getElementById('status').innerText = `Error subiendo ${file.name}: ${err.message || err}`;
+        }
+      }
+      document.getElementById('status').innerText = `Subida completada: ${uploaded} / ${files.length}`;
+    });
+
+    function buildMultipart(file, metadata){
+      const boundary = '-------314159265358979323846';
+      const delimiter = "\r\n--" + boundary + "\r\n";
+      const closeDelim = "\r\n--" + boundary + "--";
+
+      const reader = new FileReader();
+      return new Promise((resolve,reject)=>{
+        reader.onload = function(e){
+          const contentType = file.type || 'application/octet-stream';
+          const base64Data = btoa(new Uint8Array(e.target.result).reduce((data,byte)=>data+String.fromCharCode(byte),""));
+
+          const multipartRequestBody =
+            delimiter +
+            'Content-Type: application/json; charset=UTF-8\r\n\r\n' +
+            JSON.stringify(metadata) +
+            '\r\n' +
+            delimiter +
+            'Content-Type: ' + contentType + '\r\n' +
+            'Content-Transfer-Encoding: base64\r\n\r\n' +
+            base64Data +
+            closeDelim;
+
+          resolve({body:multipartRequestBody, boundary});
+        };
+        reader.onerror = reject;
+        reader.readAsArrayBuffer(file);
+      });
+    }
+
+    async function uploadFileToDrive(file, token){
+      const metadata = { name: file.name, mimeType: file.type, parents: [FOLDER_ID] };
+      const {body,boundary} = await buildMultipart(file, metadata);
+      const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name',{
+        method:'POST',
+        headers:{'Authorization':'Bearer '+token, 'Content-Type':'multipart/related; boundary="'+boundary+'"'},
+        body
+      });
+      if(!res.ok) throw new Error('HTTP '+res.status+' - '+ (await res.text()));
+      return res.json();
+    }
+
+    // Nota: si deseas que los invitados suban SIN iniciar sesión, necesitas otra estrategia: un backend que reciba archivos y use credenciales desde servidor.
+
+    // --- Mensajes y pequeñas guías en la UI ---
+    document.getElementById('confirmRSVP').addEventListener('click', ()=>{
+      const name = document.getElementById('guestName').value || 'Anónimo';
+      document.getElementById('status').innerText = `Gracias ${name}, tu RSVP fue registrado (simulado).`;
+      document.getElementById('rsvpForm').style.display='none';
+    });
+  </script>
+
+  <!-- Instrucciones rápidas (visibles en el código) -->
+  <!--
+    PASOS RÁPIDOS para configurar (resumen):
+    1) Entra a Google Cloud Console: crea un nuevo proyecto.
+    2) Habilita "Google Drive API" para el proyecto.
+    3) Ve a "APIs & Services -> Credentials" y crea un OAuth client ID (Web application).
+       - Añade como "Authorized JavaScript origins" la URL donde vayas a alojar la invitación (p.ej http://localhost:5500 si pruebas localmente con Live Server).
+       - Añade en "Authorized redirect URIs" la URL de callback si piensas usar flujos con redirect (no es necesario para este ejemplo que usa popup).
+    4) Copia el CLIENT_ID y el API_KEY y pégalos en la parte superior del archivo.
+    5) Crea en Google Drive una carpeta para las fotos, abre la carpeta y toma su ID de la URL (es la parte después de /folders/...). Pega ese ID en FOLDER_ID.
+    6) Opcional: limita permisos de la carpeta o compártela con tu cuenta para revisión.
+
+    NOTAS IMPORTANTES:
+    - Los invitados deberán iniciar sesión con su cuenta de Google para subir usando este cliente JS.
+    - Si quieres que cualquiera suba sin iniciar sesión, necesitarás un backend (server) que acepte los archivos y los suba con una cuenta de servicio. Puedo darte ese ejemplo también.
+  -->
+</body>
+</html>
