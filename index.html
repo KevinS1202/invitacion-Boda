@@ -19,18 +19,41 @@
 
     /* Contenedor principal */
     .invitation {
-      background: url('https://raw.githubusercontent.com/KevinS1202/invitacion-Boda/main/assets/img/ke1.jpeg') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #000;
-      backdrop-filter: brightness(0.95); /* suaviza el fondo */
-    }
+  position: relative;
+  background: url('https://raw.githubusercontent.com/KevinS1202/invitacion-Boda/main/assets/img/ke1.jpeg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  overflow: hidden;
+}
 
+/* Capa difusa + degradado blanco */
+.invitation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85), /* parte superior más clara */
+      rgba(255, 255, 255, 0.7),  /* transición */
+      rgba(255, 255, 255, 0.6)   /* parte inferior un poco más visible */
+    ),
+    url('https://raw.githubusercontent.com/KevinS1202/invitacion-Boda/main/assets/img/ke1.jpeg') no-repeat center center;
+  background-size: cover;
+  filter: blur(6px);
+  transform: scale(1.1); /* evita bordes duros del blur */
+  z-index: 0;
+}
+
+.invitation > * {
+  position: relative;
+  z-index: 1;
+}
     .initials {
       font-size: 18px;
       margin-bottom: 20px;
@@ -86,6 +109,7 @@
   </div>
 </body>
 </html>
+
 
 
 
