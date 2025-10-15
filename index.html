@@ -101,6 +101,47 @@
     transform: scale(1.1); /* 10% más grande */
   }
 }
+    .container {
+            display: flex;
+            max-width: 900px;
+            background-color: #ede1d6;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .container img {
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .text {
+            max-width: 450px;
+        }
+
+        .text h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container img {
+                width: 80%;
+            }
+        }
 
   </style>
 </head>
@@ -128,6 +169,7 @@
     </div>
 </body>
 </html>
+
 
 
 
