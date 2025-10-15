@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Times New Roman', serif;
+    }
+
+    /* Contenedor principal */
+    .invitation {
+      background: url('19c95b77-bf7a-4dde-a02f-19bc41b45067.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #000;
+      backdrop-filter: brightness(0.95); /* suaviza el fondo */
+    }
+
+    .initials {
+      font-size: 18px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .names {
+      font-size: 60px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .names {
+        font-size: 40px;
+      }
+      .subtitle {
+        font-size: 18px;
+      }
+      .details {
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="invitation">
+    <div class="initials">K & P</div>
+    <div class="names">KEVIN & PERLA</div>
+    <div class="subtitle">Estamos diciendo "Acepto"</div>
+    <div class="details">
+      <div class="date">
+        Noviembre 21, 2025 at <br> 6:00 PM
+      </div>
+      <div class="location">
+        Glorya Eventos <br> Lugar
+      </div>
+    </div>
+  </div>
+</body>
+</html>
