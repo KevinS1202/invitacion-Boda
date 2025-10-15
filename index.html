@@ -39,16 +39,18 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.85), /* parte superior más clara */
-      rgba(255, 255, 255, 0.7),  /* transición */
-      rgba(255, 255, 255, 0.6)   /* parte inferior un poco más visible */
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.6)
     ),
-    url('https://raw.githubusercontent.com/KevinS1202/invitacion-Boda/main/assets/img/ke4.jpeg?v=2') no-repeat center center;
+    url('https://raw.githubusercontent.com/KevinS1202/invitacion-Boda/main/assets/img/ke1.jpeg?v=2') no-repeat center center;
   background-size: cover;
   filter: blur(6px);
-  transform: scale(1.1); /* evita bordes duros del blur */
+  transform: scale(1);
+  animation: zoomInSlow 30s ease-in-out infinite alternate;
   z-index: 0;
 }
+
 
 .invitation > * {
   position: relative;
@@ -91,6 +93,15 @@
         width: 80%;
       }
     }
+    @keyframes zoomInSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1); /* 10% más grande */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -109,6 +120,7 @@
   </div>
 </body>
 </html>
+
 
 
 
