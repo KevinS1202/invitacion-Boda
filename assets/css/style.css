@@ -58,14 +58,14 @@ html, body {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
   letter-spacing: 2px;
 }
 
 .names {
   font-size: 6em;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
@@ -238,6 +238,7 @@ html, body {
         align-items: flex-start;
       }
     }
+
 
 
 
