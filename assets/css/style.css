@@ -109,7 +109,7 @@ html, body {
 .historia {
   background-color: #e3dcd2;
 flex-direction: row;
-gap: 40px;
+gap: 60px;
 padding: 0 40px;
 
 /* Borde */
@@ -284,6 +284,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
