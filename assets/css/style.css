@@ -29,6 +29,14 @@ html, body {
   background-size: cover;
   color: #000;
   text-align: center;
+  /* 🔹 Borde */
+  border: 2px solid rgba(255, 255, 255, 0.6); /* blanco semitransparente */
+
+  /* 🔹 Bordes redondeados (opcional) */
+  border-radius: 15px;
+
+  /* 🔹 Sombra */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra suave y difusa */
   
 }
 
@@ -158,6 +166,14 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   flex-direction: row;
   color: #1c1c1c;
   font-family: "Georgia", serif;
+  /* Borde */
+border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
+
+/* Esquinas redondeadas (opcional) */
+border-radius: 12px;
+
+/* Sombra */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .text-section {
@@ -221,6 +237,14 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       height: 100vh;
     gap: 50px;
       text-align: left;
+   /* Borde */
+border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
+
+/* Esquinas redondeadas (opcional) */
+border-radius: 12px;
+
+/* Sombra */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .left-text, .right-text {
@@ -258,6 +282,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
