@@ -9,8 +9,6 @@
 
 html, body {
   height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
@@ -182,6 +180,7 @@ html, body {
   from { transform: scale(1); }
   to { transform: scale(1.1); }
 }
+
 
 
 
