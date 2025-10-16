@@ -99,7 +99,7 @@ html, body {
 
 /* ----- Sección 2: Historia ----- */
 .historia {
-  background-color: #ede1d6;
+  background-color: #e3dcd2;
   flex-direction: row;
   gap: 40px;
   padding: 0 40px;
@@ -117,14 +117,21 @@ html, body {
 }
 
 .historia h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 20px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .historia p {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 @media (max-width: 768px) {
@@ -238,6 +245,7 @@ html, body {
         align-items: flex-start;
       }
     }
+
 
 
 
