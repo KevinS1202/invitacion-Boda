@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /* ----- Configuración general ----- */
 * {
@@ -55,8 +55,10 @@ html, body {
 
 .initials {
   font-size: 2em;
-  font-family: 'Great Vibes', cursive;
-  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
   margin-bottom: 90px;
   letter-spacing: 2px;
 }
@@ -65,15 +67,19 @@ html, body {
   font-size: 6em;
   font-weight: 400;
   margin-bottom: 15px;
-  font-family: 'Great Vibes', cursive;
-  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 .subtitle {
   font-size: 2em;
   margin-bottom: 80px;
-  font-family: 'Great Vibes', cursive;
-  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 .details {
@@ -81,8 +87,10 @@ html, body {
   justify-content: space-between;
   width: 40%;
   font-size: 1.5em;
-  font-family: 'Great Vibes', cursive;
-  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 @media (max-width: 768px) {
@@ -180,6 +188,7 @@ html, body {
   from { transform: scale(1); }
   to { transform: scale(1.1); }
 }
+
 
 
 
