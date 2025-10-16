@@ -100,9 +100,19 @@ html, body {
 /* ----- Sección 2: Historia ----- */
 .historia {
   background-color: #e3dcd2;
-  flex-direction: row;
-  gap: 40px;
-  padding: 0 40px;
+flex-direction: row;
+gap: 40px;
+padding: 0 40px;
+
+/* Borde */
+border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
+
+/* Esquinas redondeadas (opcional) */
+border-radius: 12px;
+
+/* Sombra */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
 }
 
 .historia img {
@@ -248,6 +258,7 @@ html, body {
         align-items: flex-start;
       }
     }
+
 
 
 
