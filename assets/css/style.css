@@ -190,7 +190,56 @@ html, body {
 }
 
 
+/* ----- Sección 3: Confirmación ----- */
 
+ .confirmacion {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdf7f0; /* color similar al fondo de la imagen */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    gap: 50px;
+      text-align: left;
+    }
+
+    .left-text, .right-text {
+      max-width: 300px;
+    }
+
+    .left-text {
+      font-size: 1.8rem;
+    }
+
+    .right-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .rsvp-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      background-color: transparent;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .rsvp-button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
 
 
 
