@@ -117,7 +117,7 @@ html, body {
 }
 
 .historia h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 25px;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
@@ -248,6 +248,7 @@ html, body {
         align-items: flex-start;
       }
     }
+
 
 
 
