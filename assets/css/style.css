@@ -66,9 +66,8 @@ html, body {
   font-size: 6em;
   font-weight: 400;
   margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -239,6 +238,7 @@ html, body {
         align-items: flex-start;
       }
     }
+
 
 
 
