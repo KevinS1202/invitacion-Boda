@@ -55,7 +55,7 @@ html, body {
 }
 
 .initials {
-  font-size: 1em;
+  font-size: 2em;
   margin-bottom: 90px;
   letter-spacing: 2px;
 }
@@ -173,4 +173,5 @@ html, body {
   from { transform: scale(1); }
   to { transform: scale(1.1); }
 }
+
 
