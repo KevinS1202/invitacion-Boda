@@ -91,9 +91,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .names { font-size: 90px; }
+  .names { font-size: 70px; }
   .subtitle { font-size: 30px; }
-  .details { flex-direction: column; gap: 10px; width: 80%; }
+  .details { flex-direction: column; gap: 10px; width: 80%; font_size: 20px;}
 }
 
 /* ----- Sección 2: Historia ----- */
@@ -149,7 +149,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 @media (max-width: 768px) {
   .historia { flex-direction: column; text-align: center; }
   .historia img { width: 80%; }
-  .historia h1 { width: 400px; font-size: 2.5rem; }
+  .historia h1 { width: 380px; font-size: 2.5rem; }
   .historia p { width: 250px; text-align: justify; display: inline-block;}
 }
 
@@ -275,6 +275,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
