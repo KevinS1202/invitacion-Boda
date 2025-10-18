@@ -53,7 +53,7 @@ html, body {
 }
 
 .initials {
-  font-size: 6em;
+  font-size: 4em;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
@@ -62,7 +62,7 @@ html, body {
 }
 
 .names {
-  font-size: 8em;
+  font-size: 6em;
   font-weight: 400;
   margin-bottom: 35px;
   font-family: "Great Vibes", cursive;
@@ -278,6 +278,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
