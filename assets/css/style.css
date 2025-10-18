@@ -150,7 +150,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 @media (max-width: 768px) {
   .historia { flex-direction: column; text-align: center; }
   .historia img { width: 80%; }
-  .historia h1 { width: 380px; font-size: 2.5rem; }
+  .historia h1 { width: 350px; font-size: 2.5rem; }
   .historia p { width: 250px; text-align: justify; display: inline-block;}
 }
 
@@ -276,6 +276,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
