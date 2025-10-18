@@ -83,7 +83,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   width: 40%;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -92,9 +92,11 @@ html, body {
 
 @media (max-width: 768px) {
   .initials { font-size: 50px;}
-  .names { font-size: 50px; }
-  .subtitle { font-size: 15px; }
-  .details { flex-direction: column; gap: 10px; width: 80%; font_size: 5px;}
+  .names { font-size: 65px; margin-bottom: 50px;}
+  .subtitle { font-size: 20px; margin-bottom: 50px;}
+  .details { flex-direction: column; gap: 40px; width: 80%; }
+  .date { font-size: 20px; }
+  .location { font-size: 20px; }
 }
 
 /* ----- Sección 2: Historia ----- */
@@ -276,6 +278,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
