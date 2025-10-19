@@ -222,7 +222,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 @media (max-width: 768px) {
   .detalles { flex-direction: column; height: 110%; }
-  .image-section { height: auto; width: 250px; margin-right: 0px; border-radius: 10px; }
+  .image-section { height: auto; width: 250px; margin-right: 0px; border-radius: 10px; margin-bottom: 20px; }
   .text-section h1 { font-family: "Great Vibes", cursive; font-weight: 400; font-style: normal; font-size: 50px; }
   .info { font-family: "Montserrat", sans-serif; font-optical-sizing: auto; font-style: normal; }
   .info strong { display: block; margin-top: 15px; font-weight: bold; letter-spacing: 1px; font-family: "Montserrat", sans-serif; font-optical-sizing: auto; font-style: normal; }
@@ -293,6 +293,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
