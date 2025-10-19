@@ -212,12 +212,12 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 .image-section {
   flex: 1;
-  background: url('../img/ke1.jpeg') center 66%/cover no-repeat;
+  background: url('../img/ke1.jpeg') center 75%/cover no-repeat;
   width: 400px;
   height: 50%;
   border-radius: 8px;
   object-fit: cover;
-  margin-rigth: 20px;
+  margin-right: 25px;
 }
 
 @media (max-width: 768px) {
@@ -293,6 +293,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
