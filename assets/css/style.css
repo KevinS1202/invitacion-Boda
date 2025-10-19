@@ -237,7 +237,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 /* ----- Sección 3: Confirmación ----- */
 
- .confirmacion {
+ .confirmation {
       margin: 0;
       padding: 0;
       background-color: #fdf7f0; /* color similar al fondo de la imagen */
@@ -245,7 +245,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       justify-content: center;
       align-items: center;
       height: 100vh;
-    gap: 50px;
+      gap: 50px;
       text-align: left;
    /* Borde */
 border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
@@ -358,6 +358,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       animation-duration: 5s;
     }
   }
+
 
 
 
