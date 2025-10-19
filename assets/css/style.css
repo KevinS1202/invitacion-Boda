@@ -266,32 +266,151 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .right-text {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+    text-align: center;
+    color: #5a4634;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+  }
 
-    .rsvp-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: 1px solid #000;
-      background-color: transparent;
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+  .rsvp-button {
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .rsvp-button:hover {
-      background-color: #000;
-      color: #fff;
+  .rsvp-button:hover {
+    background-color: #c48b5c;
+    transform: scale(1.05);
+  }
+
+  /* corazones */
+  .heart {
+    position: absolute;
+    color: #e63946;
+    font-size: 18px;
+    animation: floatUp 1s ease-out forwards;
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
+    100% {
+      opacity: 0;
+      transform: translateY(-80px) scale(1.5);
+    }
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 320px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .modal-content input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  .modal-content button {
+    margin-top: 15px;
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
 
     @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      @media (max-width: 768px) {
+  body {
+    padding: 20px;
+    height: auto;
+  }
+
+  .right-text {
+    max-width: 100%;
+    padding: 15px;
+    font-size: 0.95em;
+  }
+
+  .rsvp-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1em;
+    border-radius: 25px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+    font-size: 0.95em;
+  }
+
+  .modal-content h3 {
+    font-size: 1.2em;
+  }
+
+  .modal-content input {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .modal-content button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
+  }
+
+  /* Animación más suave para móviles */
+  .heart {
+    font-size: 16px;
+    animation: floatUp 1.2s ease-out forwards;
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
+    100% {
+      opacity: 0;
+      transform: translateY(-60px) scale(1.4);
+    }
+  }
+}
+
 
 
 
