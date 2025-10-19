@@ -190,7 +190,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .info {
-  text-align: left;
+  text-align: center;
   font-size: 16px;
   margin: 0 auto;
   width: 70%;
@@ -293,6 +293,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
