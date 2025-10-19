@@ -59,58 +59,49 @@
   pero si tu deseo es tener un detalle con nosotros,<br>
   puedes hacerlo en un sobre cerrado<br>
   o transferirnos a nuestra cuenta.</p>
-  <br>
-  <button class="rsvp-button" id="rsvpButton">Confirmar asistencia 💌</button>
+
+  <input type="text" id="nombre" placeholder="Tu nombre o nombres de los asistentes">
+  <button class="rsvp-button" id="confirmarBtn">Confirmar asistencia 💌</button>
 </div>
 
-<!-- Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3>Confirma tu asistencia</h3>
-    <p>Por favor, ingresa tu nombre o los nombres de los asistentes:</p>
-    <input type="text" id="nombre" placeholder="Ej. Ana y Carlos">
-    <button id="enviarBtn">Enviar por WhatsApp 💚</button>
-  </div>
-</div>
+<div class="hearts-container" id="heartsContainer"></div>
 
 <script>
-const rsvpButton = document.getElementById("rsvpButton");
-const modal = document.getElementById("modal");
-const enviarBtn = document.getElementById("enviarBtn");
+const confirmarBtn = document.getElementById("confirmarBtn");
+const heartsContainer = document.getElementById("heartsContainer");
 
-// Corazones animados
-rsvpButton.addEventListener("click", (e) => {
-  for (let i = 0; i < 5; i++) {
-    const heart = document.createElement("span");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤";
-    heart.style.left = Math.random() * 100 + "%";
-    heart.style.animationDelay = (i * 0.1) + "s";
-    rsvpButton.appendChild(heart);
-    setTimeout(() => heart.remove(), 1000);
-  }
-  setTimeout(() => {
-    modal.style.display = "flex";
-  }, 600);
-});
-
-// Envío a WhatsApp
-enviarBtn.addEventListener("click", () => {
+confirmarBtn.addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value.trim();
   if (nombre === "") {
-    alert("Por favor, ingresa un nombre 😊");
+    alert("Por favor, ingresa tu nombre 😊");
     return;
   }
 
-  const numero = "593967402929"; 
+  // 💖 Animación de corazones flotando
+  for (let i = 0; i < 30; i++) {
+    const heart = document.createElement("span");
+    heart.classList.add("heart");
+    heart.innerHTML = ["❤","💖","💘","💝"][Math.floor(Math.random() * 4)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+    heartsContainer.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }
+
+  // 💬 Envío a WhatsApp
+  const numero = "593XXXXXXXXX"; // 🔹 coloca tu número de WhatsApp aquí
   const mensaje = `Hola 😊, soy ${nombre}. Confirmo mi asistencia al evento.`;
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 1500); // se abre después de 1.5 segundos para ver los corazones
 });
 </script>
-
 </body>
 </html>
+
 
 
 
