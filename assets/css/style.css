@@ -240,7 +240,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
  .confirmacion {
       margin: 0;
       padding: 0;
-      font-family: 'Playfair Display', serif;
       background-color: #fdf7f0; /* color similar al fondo de la imagen */
       display: flex;
       justify-content: center;
@@ -293,6 +292,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         align-items: flex-start;
       }
     }
+
 
 
 
