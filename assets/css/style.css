@@ -368,20 +368,25 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   /* Responsive */
   @media (max-width: 768px) {
-    
-    .right-text {
+    .confirmation { height: auto;
+    padding: 15px;
+    padding-top: 60px; }
+    .right-text { 
       width: 100%;
       padding: 15px;
       font-size: 3rem;
-      padding: 15px;
     }
+    
+    .p{ text-align: center;
+    font-size: 0.5em; 
+    }
+    
     .rsvp-button {
       width: 100%;
-      padding: 14px 0;
-      font-size: 1.1em;
+      font-size: 0.5em;
     }
     input {
-      font-size: 1em;
+      font-size: 0.5em;
       padding: 12px;
     }
     .heart {
@@ -410,6 +415,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-height: 500px; /* ajusta según la altura del contenido */
   padding: 10px;
 }
+
 
 
 
