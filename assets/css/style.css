@@ -395,6 +395,23 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
   }
 
+/* Animación suave para desplegar */
+.hidden-bank {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.hidden-bank.show {
+  max-height: 500px; /* ajusta según la altura del contenido */
+  padding: 10px;
+}
+
+
 
 
 
