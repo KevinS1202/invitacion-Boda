@@ -262,7 +262,11 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .left-text {
-      font-size: 1.8rem;
+      font-size: 3rem;
+      font-family: "Great Vibes", cursive;
+      font-weight: 400;
+      font-style: normal;
+      align-text: center;  
     }
 
     .right-text {
@@ -358,6 +362,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       animation-duration: 5s;
     }
   }
+
 
 
 
