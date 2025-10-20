@@ -277,6 +277,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
   }
 
   p {
@@ -362,6 +366,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       animation-duration: 5s;
     }
   }
+
 
 
 
