@@ -385,6 +385,11 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       width: 100%;
       font-size: 0.5em;
     }
+
+    div#datosBancarios {
+      font-size: 0.5em;
+    }
+    
     input {
       font-size: 0.5em;
       padding: 12px;
@@ -415,6 +420,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-height: 500px; /* ajusta según la altura del contenido */
   padding: 10px;
 }
+
 
 
 
