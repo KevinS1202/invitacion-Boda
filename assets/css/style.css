@@ -368,12 +368,11 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   /* Responsive */
   @media (max-width: 768px) {
-    body {
-      padding: 20px;
-      height: auto;
-    }
+    
     .right-text {
       width: 100%;
+      padding: 15px;
+      font-size: 3rem;
       padding: 15px;
     }
     .rsvp-button {
@@ -411,6 +410,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-height: 500px; /* ajusta según la altura del contenido */
   padding: 10px;
 }
+
 
 
 
