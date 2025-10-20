@@ -49,26 +49,41 @@
     <div class="image-section"></div>
   </section>
 
-<!--Seccion 4: Confirmación -->
-  <section class="slide confirmation">
-    <div class="left-text">
-      Esperamos dsifrutar contigo en esta nueva etapa
+  <!--Seccion 4: Confirmación -->
+<section class="slide confirmation">
+  <div class="left-text">
+    Esperamos disfrutar contigo en esta nueva etapa
+  </div>
+  <div class="right-text">
+    <p>Tu presencia es el mejor regalo,
+      pero si tu deseo es tener un detalle con nosotros,
+      puedes hacerlo en un sobre cerrado
+      o transferirnos a nuestra cuenta.</p>
+
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <button class="rsvp-button" id="confirmarBtn">Confirmar asistencia 💌</button>
+    
+    <!-- Nuevo botón de cuenta bancaria -->
+    <button class="rsvp-button" id="cuentaBtn">Cuenta bancaria 🏦</button>
+    
+    <!-- Contenedor oculto con los datos bancarios -->
+    <div id="datosBancarios" style="display:none; margin-top:10px; padding:10px; border:1px solid #ccc; border-radius:5px;">
+      <p><strong>Banco:</strong> Banco Pichincha</p>
+      <p><strong>Tipo de cuenta:</strong> Cuenta Corriente</p>
+      <p><strong>Número de cuenta:</strong> 123-456789-0</p>
+      <p><strong>Titular:</strong> Juan Pérez</p>
+      <p><strong>IBAN (si aplica):</strong> PICH-EC1234567890</p>
     </div>
-    <div class="right-text">
-  <p>Tu presencia es el mejor regalo,
-  pero si tu deseo es tener un detalle con nosotros,
-  puedes hacerlo en un sobre cerrado
-  o transferirnos a nuestra cuenta.</p>
+  </div>
 
-  <input type="text" id="nombre" placeholder="Tu nombre">
-  <button class="rsvp-button" id="confirmarBtn">Confirmar asistencia 💌</button>
-</div>
+  <div class="hearts-container" id="heartsContainer"></div>
+</section>
 
-<div class="hearts-container" id="heartsContainer"></div>
-  </section>
 <script>
 const confirmarBtn = document.getElementById("confirmarBtn");
 const heartsContainer = document.getElementById("heartsContainer");
+const cuentaBtn = document.getElementById("cuentaBtn");
+const datosBancarios = document.getElementById("datosBancarios");
 
 confirmarBtn.addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value.trim();
@@ -97,10 +112,21 @@ confirmarBtn.addEventListener("click", () => {
     window.open(url, "_blank");
   }, 1800); // espera 1.8s para ver la animación antes de abrir WhatsApp
 });
+
+// Mostrar/ocultar datos bancarios
+cuentaBtn.addEventListener("click", () => {
+  if (datosBancarios.style.display === "none") {
+    datosBancarios.style.display = "block";
+  } else {
+    datosBancarios.style.display = "none";
+  }
+});
 </script>
+
 
 </body>
 </html>
+
 
 
 
