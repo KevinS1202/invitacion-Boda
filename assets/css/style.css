@@ -237,7 +237,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 /* ----- Sección 3: Confirmación ----- */
 
- .confirmation {
+ .section.slide.confirmation {
       margin: 0;
       padding: 0;
       background-color: #fdf7f0; /* color similar al fondo de la imagen */
@@ -336,7 +336,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   /* Responsive */
   @media (max-width: 768px) {
-    body {
+    .section.slide.confirmation {
       padding: 20px;
       height: auto;
     }
@@ -358,6 +358,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       animation-duration: 5s;
     }
   }
+
 
 
 
