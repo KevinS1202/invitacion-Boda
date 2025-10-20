@@ -52,7 +52,7 @@
 <!--Seccion 4: Confirmación -->
   <section class="slide confirmation">
     <div class="left-text">
-      Esperamos dsifrutar contigo en esta nueva etapa.
+      Esperamos dsifrutar contigo en esta nueva etapa
     </div>
     <div class="right-text">
   <p>Tu presencia es el mejor regalo,<br>
@@ -60,14 +60,13 @@
   puedes hacerlo en un sobre cerrado<br>
   o transferirnos a nuestra cuenta.</p>
 
-  <input type="text" id="nombre" placeholder="Tu nombre o nombres de los asistentes">
+  <input type="text" id="nombre" placeholder="Tu nombre">
   <button class="rsvp-button" id="confirmarBtn">Confirmar asistencia 💌</button>
 </div>
 
 <div class="hearts-container" id="heartsContainer"></div>
   </section>
 
-<script>
 const confirmarBtn = document.getElementById("confirmarBtn");
 const heartsContainer = document.getElementById("heartsContainer");
 
@@ -78,30 +77,31 @@ confirmarBtn.addEventListener("click", () => {
     return;
   }
 
-  // 💖 Animación de corazones flotando
-  for (let i = 0; i < 30; i++) {
-    const heart = document.createElement("span");
+  // 💖 Crear corazones flotantes
+  for (let i = 0; i < 25; i++) {
+    const heart = document.createElement("div");
     heart.classList.add("heart");
-    heart.innerHTML = ["❤","💖","💘","💝"][Math.floor(Math.random() * 4)];
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 10 + "px";
-    heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    heart.style.opacity = Math.random() * 0.8 + 0.2;
     heartsContainer.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
+    setTimeout(() => heart.remove(), 7000);
   }
 
-  // 💬 Envío a WhatsApp
-  const numero = "593967402929"; // 🔹 coloca tu número de WhatsApp aquí
+  // 💬 Enviar mensaje a WhatsApp
+  const numero = "593967402929"; // ← coloca tu número aquí (sin +)
   const mensaje = `Hola 😊, soy ${nombre}. Confirmo mi asistencia al evento.`;
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
   setTimeout(() => {
     window.open(url, "_blank");
-  }, 1500); // se abre después de 1.5 segundos para ver los corazones
+  }, 1800); // espera 1.8s para ver la animación antes de abrir WhatsApp
 });
 </script>
+
 </body>
 </html>
+
 
 
 
