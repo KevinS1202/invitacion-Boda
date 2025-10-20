@@ -285,6 +285,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   p {
     line-height: 1.6;
+    text-align: justify;
   }
 
   input {
@@ -393,6 +394,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       height: 18px;
     }
   }
+
 
 
 
