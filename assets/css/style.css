@@ -377,7 +377,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       font-size: 3rem;
     }
     
-    .p{ text-align: center;
+    .p { text-align: center;
     font-size: 0.5em; 
     }
     
@@ -420,6 +420,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-height: 500px; /* ajusta según la altura del contenido */
   padding: 10px;
 }
+
 
 
 
