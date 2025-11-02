@@ -13,7 +13,7 @@ html, body {
 }
 
 .slide {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   display: flex;
@@ -474,8 +474,8 @@ section:nth-child(4) * { animation-delay: 1.2s; }
 }
 
 /* 🏦 Ícono del banco */
+/* 🌿 Diseño base (se mantiene igual) */
 .icono-banco {
-  width: 30px;
   height: auto;
   margin-bottom: 10px;
   opacity: 0;
@@ -483,7 +483,16 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   animation: iconFade 1.2s ease forwards;
 }
 
-/* ✨ Animación suave del ícono */
+/* 🏦 Tamaños individuales editables */
+.logo-pichincha {
+  width: 30px; /* tamaño específico para Pichincha */
+}
+
+.logo-produbanco {
+  width: 60px; /* tamaño específico para Produbanco */
+}
+
+/* ✨ Animación para los íconos */
 @keyframes iconFade {
   to {
     opacity: 1;
@@ -491,12 +500,6 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   }
 }
 
-/* 📱 Responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-  .cuentas-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 
