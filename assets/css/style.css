@@ -212,7 +212,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 .image-section {
   flex: 1;
-  background: url('../img/detalle.jpeg') center 75%/cover no-repeat;
+  background: url('../img/detalles.jpeg') center 75%/cover no-repeat;
   width: 400px;
   height: 50%;
   border-radius: 8px;
@@ -513,6 +513,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
