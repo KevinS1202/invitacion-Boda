@@ -475,7 +475,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
 
 /* 🏦 Ícono del banco */
 .icono-banco {
-  width: 70px;
+  width: 30px;
   height: auto;
   margin-bottom: 10px;
   opacity: 0;
@@ -497,6 +497,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
