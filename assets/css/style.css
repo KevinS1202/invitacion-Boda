@@ -446,6 +446,58 @@ section:nth-child(4) * { animation-delay: 1.2s; }
 }
 
 
+  /* 🌿 Diseño de las cuentas bancarias */
+.cuentas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* 💳 Tarjeta individual de cada cuenta */
+.cuenta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🌸 Efecto hover suave */
+.cuenta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* 🏦 Ícono del banco */
+.icono-banco {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: iconFade 1.2s ease forwards;
+}
+
+/* ✨ Animación suave del ícono */
+@keyframes iconFade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .cuentas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
