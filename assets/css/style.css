@@ -500,6 +500,20 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   }
 }
 
+/* 📍 Enlace de Google Maps */
+.map-link {
+  color: #d17b88; /* tono romántico rosado */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.map-link:hover {
+  color: #b85c6f;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
 
 
 
