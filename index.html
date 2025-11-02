@@ -63,12 +63,27 @@
     <!-- Nuevo botón de cuenta bancaria -->
     <button class="rsvp-button" id="cuentaBtn">Cuenta bancaria 🏦</button>
     <!-- Contenedor oculto con los datos bancarios -->
-    <div id="datosBancarios" style="display:none; margin-top:10px; padding:10px; border:1px solid #ccc; border-radius:5px;">
-      <p><strong>Banco:</strong> Banco Pichincha</p>
-      <p><strong>Tipo de cuenta:</strong> Cuenta Corriente</p>
-      <p><strong>Número de cuenta:</strong> 123-456789-0</p>
-      <p><strong>Titular:</strong> Kevin López</p>
-    </div>
+    <!-- Contenedor oculto con los datos bancarios -->
+<div id="datosBancarios" style="display:none; margin-top:10px; padding:10px; border:1px solid #ccc; border-radius:10px; background:#fafafa;">
+  <h3 style="text-align:center;">💳 Datos Bancarios</h3>
+
+  <div style="margin-bottom:10px;">
+    <p><strong>Banco:</strong> Banco Pichincha</p>
+    <p><strong>Tipo de cuenta:</strong> Cuenta Corriente</p>
+    <p><strong>Número de cuenta:</strong> 123-456789-0</p>
+    <p><strong>Titular:</strong> Kevin López</p>
+  </div>
+
+  <hr style="border:0; border-top:1px solid #ddd;">
+
+  <div>
+    <p><strong>Banco:</strong> Produbanco</p>
+    <p><strong>Tipo de cuenta:</strong> Cuenta de Ahorros</p>
+    <p><strong>Número de cuenta:</strong> 987-654321-0</p>
+    <p><strong>Titular:</strong> Kevin López</p>
+  </div>
+</div>
+
   
     <input type="text" id="nombre" placeholder="Tu nombre">
     <button class="rsvp-button" id="confirmarBtn">Confirmar asistencia 💌</button>
@@ -124,6 +139,7 @@ cuentaBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
