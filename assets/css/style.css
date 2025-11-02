@@ -489,7 +489,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
 }
 
 .logo-produbanco {
-  width: 60px; /* tamaño específico para Produbanco */
+  width: 30px; /* tamaño específico para Produbanco */
 }
 
 /* ✨ Animación para los íconos */
@@ -513,6 +513,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
