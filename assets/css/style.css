@@ -422,6 +422,29 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 10px;
 }
 
+/* ✨ Animación suave para todos los textos */
+body, h1, h2, h3, p, div, span {
+  animation: fadeInUp 1.8s ease forwards;
+  opacity: 0;
+}
+
+/* Aplica retrasos suaves según la posición del texto */
+section:nth-child(1) * { animation-delay: 0.3s; }
+section:nth-child(2) * { animation-delay: 0.6s; }
+section:nth-child(3) * { animation-delay: 0.9s; }
+section:nth-child(4) * { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 
