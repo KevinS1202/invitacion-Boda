@@ -467,7 +467,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       height: 18px;
     }
       .cuentas-grid {
-    grid-template-columns: 1fr; /* una columna */
+    grid-template-columns: 1fr !important; /* una columna */
     gap: 15px; /* espacio entre tarjetas */
     justify-items: center;
 }
@@ -583,6 +583,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
