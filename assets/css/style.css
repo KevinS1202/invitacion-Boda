@@ -122,7 +122,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 /* ✨ Párrafos dentro de la cita */
 .historia .versi p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin: 8px 0;
   line-height: 1.4;
   font-family: "Great Vibes", cursive;
@@ -596,6 +596,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
