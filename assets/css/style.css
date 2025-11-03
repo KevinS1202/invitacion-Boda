@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ----- Configuración general ----- */
 * {
@@ -455,6 +455,13 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       width: 18px;
       height: 18px;
     }
+     .cuentas-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .cuenta-card {
+    width: 100%;
+  }
   }
 
 /* Animación suave para desplegar */
@@ -564,6 +571,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
