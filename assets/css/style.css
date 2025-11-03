@@ -429,7 +429,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     
     p { text-align: center;
-    font-size: 0.5em; 
+    font-size: 0.4em; 
     }
     
     .rsvp-button {
@@ -563,6 +563,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
