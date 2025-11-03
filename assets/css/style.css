@@ -240,7 +240,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 /* ----- Sección 3: Confirmación ----- */
 
  .confirmation {
-   background: url('../img/confirmacion.jpeg') center 60%/cover no-repeat;
+   background: url('../img/confirmacion.jpeg') center 77%/cover no-repeat;
   background-size: cover;
   color: #000;
    min-height: max-content;
@@ -534,6 +534,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
