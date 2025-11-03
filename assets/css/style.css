@@ -20,6 +20,7 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: max-content;
 }
 
 /* ----- Sección 1: Invitación ----- */
@@ -29,6 +30,7 @@ html, body {
   background-size: cover;
   color: #000;
   text-align: center;
+  min-height: max-content;
 
   /* Bordes */
   border: 2px solid rgba(255, 255, 255, 0.6);
@@ -238,9 +240,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 /* ----- Sección 3: Confirmación ----- */
 
  .confirmation {
-   background: url('../img/confirmacion.jpeg') no-repeat center center;
+   background: url('../img/confirmacion.jpeg') center 60%/cover no-repeat;
   background-size: cover;
   color: #000;
+   min-height: max-content;
       margin: 0;
       padding: 0;
       display: flex;
@@ -260,6 +263,20 @@ border-radius: 12px;
 /* Sombra */
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
+
+.confirmation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5); /* capa blanca semitransparente */
+  border-radius: 15px; /* mantiene los bordes visibles */
+  z-index: 0;
+}
+
+.confirmation > * {
+  position: relative;
+  z-index: 1;
+}
 
     .left-text, .right-text {
       max-width: 300px;
@@ -517,6 +534,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
