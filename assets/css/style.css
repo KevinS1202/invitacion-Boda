@@ -238,7 +238,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 /* ----- Sección 3: Confirmación ----- */
 
  .confirmation {
-   background: url('../img/ke4.jpeg') no-repeat center center;
+   background: url('../img/confirmacion.jpeg') no-repeat center center;
   background-size: cover;
   color: #000;
       margin: 0;
@@ -517,6 +517,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
