@@ -30,8 +30,7 @@ html, body {
   background-size: cover;
   color: #000;
   text-align: center;
-  min-height: max-content;
-
+  
   /* Bordes */
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 15px;
@@ -277,17 +276,13 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
    background: url('../img/confirmacion.jpeg') center 77%/cover no-repeat;
   background-size: cover;
   color: #000;
-   min-height: max-content;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       gap: 50px;
       text-align: left;
-   position: relative;
-   overflow: visible;
    /* Borde */
 border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
 
@@ -568,6 +563,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
