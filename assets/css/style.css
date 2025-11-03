@@ -119,55 +119,15 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 .versi {
   margin-top: 15px;
 }
-/* 🌸 Estilo romántico para la cita bíblica */
-.historia .versi {
-  font-style: italic;
-  color: #5a4634; /* tono marrón suave */
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.4); /* fondo sutil */
-  border-left: 3px solid #d4a373; /* línea dorada romántica */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* ✨ Párrafos dentro de la cita */
 .historia .versi p {
   font-size: 1.1rem;
   margin: 8px 0;
   line-height: 1.4;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Great Vibes", cursive;
   color: #4b3a2a;
-}
-
-/* 💖 Versículo destacado (primera línea) */
-.historia .versi p:first-child {
-  font-weight: bold;
-  color: #a67c52;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-/* 🕊️ Efecto decorativo de comillas */
-.historia .versi::before {
-  content: "“";
-  font-family: "Great Vibes", cursive;
-  font-size: 60px;
-  color: #d4a373;
-  position: relative;
-  top: 15px;
-  margin-right: 8px;
-}
-
-.historia .versi::after {
-  content: "”";
-  font-family: "Great Vibes", cursive;
-  font-size: 60px;
-  color: #d4a373;
-  position: relative;
-  top: 15px;
-  margin-left: 8px;
+  font-style: normal;
 }
 
 .historia img {
@@ -636,6 +596,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
