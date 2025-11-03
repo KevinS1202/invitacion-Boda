@@ -467,9 +467,13 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       height: 18px;
     }
       .cuentas-grid {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr; /* una columna */
+    gap: 15px; /* espacio entre tarjetas */
+    justify-items: center;
 }
+    .cuenta-card {
+    width: 90%; /* opcional: que no ocupe todo el ancho */
+  }
   }
 
 /* Animación suave para desplegar */
@@ -579,6 +583,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
