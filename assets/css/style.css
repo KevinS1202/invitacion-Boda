@@ -212,7 +212,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 .image-section {
   flex: 1;
-  background: url('../img/detalles.jpeg') center 75%/cover no-repeat;
+  background: url('../img/detalles.jpeg') center 60%/cover no-repeat;
   width: 400px;
   height: 50%;
   border-radius: 8px;
@@ -238,15 +238,19 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 /* ----- Sección 3: Confirmación ----- */
 
  .confirmation {
+   background: url('../img/ke4.jpeg') no-repeat center center;
+  background-size: cover;
+  color: #000;
       margin: 0;
       padding: 0;
-      background-color: #fdf7f0; /* color similar al fondo de la imagen */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       gap: 50px;
       text-align: left;
+   position: relative;
+   overflow: visible;
    /* Borde */
 border: 1px solid #c0b7ad; /* Color suave, puedes ajustar */
 
@@ -513,6 +517,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
