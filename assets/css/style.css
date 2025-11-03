@@ -204,7 +204,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 .info strong {
   display: block;
-  margin-top: 15px;
   font-weight: bold;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
@@ -569,6 +568,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
