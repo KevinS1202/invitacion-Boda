@@ -315,10 +315,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 
-.confirmation > * {
-  position: relative;
-  z-index: 1;
-}
 
     .left-text, .right-text {
       max-width: 300px;
@@ -519,7 +515,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   /* 🌿 Diseño de las cuentas bancarias */
 .cuentas-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   justify-content: center;
   align-items: start;
@@ -583,6 +579,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
