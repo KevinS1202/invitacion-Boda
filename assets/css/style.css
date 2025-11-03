@@ -226,6 +226,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   align-items: center;
   gap: 10px;
   color: #333;
+  flex-direction: column;
 }
 
 .icono-info {
@@ -442,7 +443,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     
     input {
-      font-size: 0.5em;
+      font-size: 0.4em;
       padding: 12px;
     }
     .heart {
@@ -563,6 +564,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
