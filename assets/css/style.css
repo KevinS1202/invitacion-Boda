@@ -115,10 +115,15 @@ border-radius: 12px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 }
+
+.versi {
+  margin-top: 15px;
+}
 .historia .versi p {
   font-family: "Great Vibes", cursive !important;
   font-style: normal;
   font-size: 1.4em;
+  line-height: 1.4;
 }
 .historia img {
   width: 400px;
@@ -583,6 +588,7 @@ section:nth-child(4) * { animation-delay: 1.2s; }
   text-decoration: underline;
   transform: scale(1.05);
 }
+
 
 
 
